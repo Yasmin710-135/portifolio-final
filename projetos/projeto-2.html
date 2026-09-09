@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>To-Do List | Yasmin Melissa</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/style.css"></head>
+<body class="project-page">
+<header class="project-topbar"><div class="container"><a class="back-link" href="../index.html#projetos">← Voltar ao Portfólio</a><strong>Yasmin Melissa | Detalhes do Projeto</strong></div></header>
+<main class="container"><!-- TODO: ALTERAR AQUI - Personalize o conteúdo da subpágina. --><h1 class="project-title">Gerenciador de Tarefas (To-Do List)</h1><p class="project-description">Lista funcional para organizar tarefas e manter os itens salvos no LocalStorage do navegador.</p><div class="project-badges"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div><div class="split-container"><section class="code-panel"><h2>Código demonstrativo</h2><pre><code><span class="code-keyword">const</span> tarefas = JSON.parse(
+  localStorage.getItem(<span class="code-string">"tarefas"</span>) || <span class="code-string">"[]"</span>
+);
+
+<span class="code-keyword">function</span> salvarTarefa(texto) {
+  tarefas.push(texto);
+  localStorage.setItem(<span class="code-string">"tarefas"</span>, JSON.stringify(tarefas));
+}</code></pre></section><section class="preview-panel"><h2>Demonstração ao vivo</h2><div class="demo-box"><label for="nova-tarefa">Nova tarefa</label><input id="nova-tarefa" type="text" placeholder="Ex.: Estudar JavaScript"><button class="button" type="button" id="adicionar-tarefa">Adicionar tarefa</button><ul class="task-list" id="lista-tarefas"></ul></div></section></div></main>
+<footer class="site-footer"><div class="container footer-content"><p><strong>Nome Completo do Aluno:</strong> Yasmin Melissa</p><p><strong>Curso:</strong> Técnico em Desenvolvimento de Sistemas</p><p><strong>Turma:</strong> 2026A</p><p><strong>Disciplina:</strong> Desenvolvimento Web</p></div></footer><script src="../js/script.js"></script></body></html>
