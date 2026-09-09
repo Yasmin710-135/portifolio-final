@@ -1,5 +1,8 @@
-/* TODO: ALTERAR AQUI - Conecte o formulário a um serviço de envio, se desejar receber mensagens. */
-// Navegação mobile com suporte a teclado e leitores de tela.
+// 🛑 PARE TUDO! SE VOCÊ MEXER NESTA FUNÇÃO SEM SABER O QUE TÁ FAZENDO, NEM DEUS CONSERTA!
+/* ⚠️ OBVIEDADE NÍVEL HARD: FORMULÁRIO SEM SERVIÇO DE ENVIO NÃO RECEBE MENSAGEM! ⚠️ */
+/* TODO: CONECTE O FORMULÁRIO A UM SERVIÇO REAL SE QUISER RECEBER MENSAGENS! */
+// 🚨 ATENÇÃO EXTREMA: O MENU MOBILE PRECISA FUNCIONAR NO CELULAR E NO TECLADO! 🚨
+// TODO: NÃO REMOVA ESTA NAVEGAÇÃO OU O USUÁRIO VAI FICAR PRESO NO MENU!
 const menuToggle = document.querySelector('.menu-toggle');
 const mainMenu = document.querySelector('#main-menu');
 
@@ -31,6 +34,8 @@ if (contactForm) {
     const fields = [name, email, message];
     let isValid = true;
 
+    // ⚠️ OBVIEDADE NÍVEL HARD: CAMPO VAZIO NÃO É FORMULÁRIO VÁLIDO! ⚠️
+    // TODO: NÃO DESATIVE ESTA VALIDAÇÃO OU O PROFESSOR VAI ENCONTRAR CAMPOS EM BRANCO!
     fields.forEach((field) => {
       const fieldContainer = field.closest('.field');
       const error = fieldContainer.querySelector('.field-error');
@@ -57,7 +62,8 @@ if (contactForm) {
   });
 }
 
-/* TODO: ALTERAR AQUI - Personalize as demonstrações ou conecte-as aos seus projetos reais. */
+/* 🚨 ATENÇÃO EXTREMA: ESTAS DEMONSTRAÇÕES SÃO AS FUNCIONALIDADES DOS PROJETOS! 🚨 */
+/* TODO: TROQUE AS DEMONSTRAÇÕES PELOS SEUS PROJETOS REAIS QUANDO ESTIVEREM PRONTOS! */
 const imcButton = document.querySelector('#calcular-imc');
 if (imcButton) {
   imcButton.addEventListener('click', () => {
