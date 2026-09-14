@@ -74,47 +74,60 @@ h2 { font-size: clamp(2.375rem, 5vw, 3.625rem); letter-spacing: -2px; }
 .contact { background: var(--bg-dark-section); color: var(--text-light); }.contact-grid { display: grid; gap: 110px; grid-template-columns: 1fr 1fr; }.contact-copy h2 { color: var(--accent-primary); margin-bottom: 25px; }.contact-copy > p:not(.eyebrow) { color: var(--text-light); max-width: 380px; }.social-links { display: flex; flex-wrap: wrap; gap: 23px; margin-top: 38px; }.social-links a { border-bottom: 1px solid var(--accent-primary); padding-bottom: 5px; }.contact-form { background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-primary); padding: 36px; }.field { margin-bottom: 21px; }.field label { display: block; font-size: .8125rem; font-weight: 700; margin-bottom: 7px; }.field input, .field textarea { background: transparent; border: 0; border-bottom: 1px solid var(--border-color); color: var(--text-primary); font: 1rem var(--body-font); outline: 0; padding: 8px 0; resize: vertical; width: 100%; }.field input:focus, .field textarea:focus { border-color: var(--accent-primary); }.field-error { color: var(--accent-hover); display: block; font-size: .75rem; min-height: 18px; }.field.invalid input, .field.invalid textarea { border-color: var(--accent-hover); }.button-dark { background: var(--accent-primary); color: #ffffff; width: 100%; }.button-dark:hover { background: var(--accent-hover); color: #ffffff !important; }.form-status { color: var(--text-primary); font-size: .8125rem; margin-top: 14px; text-align: center; }
 .site-footer { background: var(--bg-dark-section); border-top: 1px solid #0b3838; color: var(--text-light); font-size: .8125rem; padding: 22px 0; }.footer-content { display: grid; gap: 8px; grid-template-columns: repeat(4, 1fr); }.footer-content strong { color: #ffffff; }
 
-/* 🚨 SEPARAÇÃO VISUAL: HABILIDADES CLARA + CONTATO ESCURO */
-#habilidades, .skills-section {
+/* 🚨 CORREÇÃO DE CONTRASTE DOS TEXTOS */
+
+/* 1. SEÇÃO HABILIDADES (FUNDO CLARO) */
+#habilidades,
+.skills-section {
   background-color: var(--bg-primary, #f5efe6) !important;
-  color: var(--text-primary, #292727);
-  padding: 4rem 2rem;
-  border-bottom: 1px solid var(--border-color, #e2dcd5);
+  color: #292727 !important;
+}
+
+#habilidades .section-subtitle,
+#habilidades p,
+#habilidades span,
+.skills-section .section-subtitle,
+.skills-section p,
+.skills-section span {
+  color: #575352 !important;
 }
 
 #habilidades h2,
-#habilidades .section-title {
-  color: var(--text-primary, #292727) !important;
+#habilidades h2 span,
+#habilidades .highlight-text,
+.skills-section h2,
+.skills-section h2 span,
+.skills-section .highlight-text {
+  color: #292727 !important;
 }
 
-#habilidades .section-subtitle {
-  color: var(--text-muted, #575352) !important;
-}
-
-.skill-card,
-.skills-grid > div,
-.skills-list,
-.skill {
-  background-color: var(--card-bg, #ffffff) !important;
-  border: 1px solid var(--border-color, #e2dcd5) !important;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
-  color: var(--text-primary, #292727) !important;
-}
-
-#contato, .contact-section {
-  background-color: var(--bg-dark-section, #104c4c) !important;
-  color: var(--text-light, #f5efe6);
-  padding: 4rem 2rem;
+/* 2. SEÇÃO CONTATO (FUNDO ESCURO VERDE-PETRÓLEO) */
+#contato,
+.contact-section {
+  background-color: #104c4c !important;
+  color: #f5efe6 !important;
 }
 
 #contato h2,
-#contato .section-title {
-  color: var(--text-light, #f5efe6) !important;
+#contato .section-title,
+.contact-section h2,
+.contact-section .section-title {
+  color: #f5efe6 !important;
 }
 
+#contato h2 span,
 #contato .highlight-text,
-#contato em {
-  color: var(--accent-primary, #4a6fa5) !important;
+.contact-section h2 span,
+.contact-section .highlight-text {
+  color: #bae6fd !important;
+}
+
+#contato .section-subtitle,
+#contato p,
+.contact-section .section-subtitle,
+.contact-section p,
+.contact-section .contact-copy > p:not(.eyebrow) {
+  color: #d1ecf1 !important;
 }
 
 /* 🚨 ATENÇÃO EXTREMA: RESPONSIVIDADE NÃO É OPCIONAL EM UM PORTFÓLIO WEB! 🚨 */
