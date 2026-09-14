@@ -92,26 +92,35 @@ h2 { font-size: clamp(2.375rem, 5vw, 3.625rem); letter-spacing: -2px; }
   color: #575352 !important;
 }
 
-/* 🚨 CORREÇÃO DO TÍTULO EM HABILIDADES */
-/* Título principal em Grafite Escuro */
-#habilidades h2,
-.skills-section h2 {
-  color: #292727 !important;
-}
+/* 🚨 REFAÇO E FORÇO A VISIBILIDADE COMPLETA DO TÍTULO DE HABILIDADES */
 
-/* Palavra em destaque (span) em Azul Sereno */
-#habilidades h2 span,
-#habilidades h2 .highlight,
-#habilidades h2 .accent,
-#habilidades h2 .highlight-text,
-.skills-section h2 span,
-.skills-section h2 .highlight,
-.skills-section h2 .accent,
-.skills-section h2 .highlight-text {
-  color: #4a6fa5 !important;
-  display: inline-block !important;
+/* Remove efeitos de texto gradiente/transparente do título inteiro. */
+#habilidades h2,
+#habilidades h2 *,
+.skills-section h2,
+.skills-section h2 *,
+[class*="skill"] h2,
+[class*="skill"] h2 * {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: #292727 !important;
+  color: #292727 !important;
   opacity: 1 !important;
   visibility: visible !important;
+}
+
+/* Mantém a palavra destacada em Azul Sereno, inclusive quando usa <em>. */
+#habilidades h2 span,
+#habilidades h2 strong,
+#habilidades h2 em,
+#habilidades h2 .highlight,
+.skills-section h2 span,
+.skills-section h2 strong,
+.skills-section h2 em,
+.skills-section h2 .highlight {
+  -webkit-text-fill-color: #4a6fa5 !important;
+  color: #4a6fa5 !important;
 }
 
 /* 2. SEÇÃO CONTATO (FUNDO ESCURO VERDE-PETRÓLEO) */
