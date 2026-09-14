@@ -92,13 +92,26 @@ h2 { font-size: clamp(2.375rem, 5vw, 3.625rem); letter-spacing: -2px; }
   color: #575352 !important;
 }
 
+/* 🚨 CORREÇÃO DO TÍTULO EM HABILIDADES */
+/* Título principal em Grafite Escuro */
 #habilidades h2,
-#habilidades h2 span,
-#habilidades .highlight-text,
-.skills-section h2,
-.skills-section h2 span,
-.skills-section .highlight-text {
+.skills-section h2 {
   color: #292727 !important;
+}
+
+/* Palavra em destaque (span) em Azul Sereno */
+#habilidades h2 span,
+#habilidades h2 .highlight,
+#habilidades h2 .accent,
+#habilidades h2 .highlight-text,
+.skills-section h2 span,
+.skills-section h2 .highlight,
+.skills-section h2 .accent,
+.skills-section h2 .highlight-text {
+  color: #4a6fa5 !important;
+  display: inline-block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* 2. SEÇÃO CONTATO (FUNDO ESCURO VERDE-PETRÓLEO) */
